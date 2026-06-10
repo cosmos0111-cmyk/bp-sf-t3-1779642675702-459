@@ -1,213 +1,693 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>주식투자 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #FCFBF7;
-      --charcoal-fg: #1E1B18;
-      --gold-accent: #b8976f;
-      --hairline-color: #e5e2db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 상위노출 대행 | 마포 주식투자 전문 | 노이어 골드</title>
+    <meta name="description" content="주식투자 업계, 구글 상위노출 대행으로 마포에서 가장 강력한 브랜딩을 완성하세요. 틀을 깨는 전략, 극적인 결과. 010-6279-0862">
+    <meta name="keywords" content="구글 상위노출 대행, 마포 주식투자, SEO 대행, 주식 블로그 상위노출, 금융 SEO, 노이어 골드">
+    <link rel="canonical" href="https://sf-t3-1779642675702-459.vercel.app/">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    
+    <!-- OG 메타 -->
+    <meta property="og:title" content="구글 상위노출 대행 | 마포 주식투자 | 노이어 골드">
+    <meta property="og:description" content="주식투자 업계, 구글 상위노출 대행으로 마포에서 가장 강력한 브랜딩을 완성하세요. 틀을 깨는 전략, 극적인 결과.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-459.vercel.app/">
+    <meta property="og:image" content="https://sf-t3-1779642675702-459.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="구글 상위노출 대행 | 마포 주식투자 | 노이어 골드">
+    <meta name="twitter:description" content="주식투자 업계, 구글 상위노출 대행으로 마포에서 가장 강력한 브랜딩을 완성하세요.">
+    <meta name="twitter:image" content="https://sf-t3-1779642675702-459.vercel.app/twitter-image.jpg">
+    
+    <!-- JSON-LD 스키마 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "노이어 골드 - 구글 상위노출 대행",
+        "description": "주식투자 업계를 위한 구글 상위노출 대행 서비스. 마포 지역 기반, 틀을 깨는 전략.",
+        "telephone": "010-6279-0862",
+        "areaServed": {
+            "@type": "City",
+            "name": "마포"
+        },
+        "url": "https://sf-t3-1779642675702-459.vercel.app/",
+        "serviceType": "Search Engine Optimization",
+        "priceRange": "$$",
+        "image": "https://sf-t3-1779642675702-459.vercel.app/og-image.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "마포",
+            "addressCountry": "KR"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "주식하는김대리"
+                },
+                "datePublished": "2025-03-15",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "reviewBody": "1년 동안 다른 대행사 3군데 써봤는데, 이곳이 유일하게 결과를 냈습니다."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "개미탈출중"
+                },
+                "datePublished": "2025-02-28",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "reviewBody": "구글 상위노출 대행? 여기 말고는 답이 없습니다. 주식 키워드 1페이지 찍었어요."
+            }
+        ]
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* Reset */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        /* Variables */
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #fafaf5;
+            --accent: #c5a880;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: 'Helvetica Neue', Arial, sans-serif;
+            --gap: 48px;
+            --padding: 72px;
+            --section-gap: 120px;
+            --max-width: 720px;
+        }
+        
+        body {
+            font-family: var(--font-serif);
+            background-color: var(--primary);
+            color: var(--secondary);
+            line-height: 1.8;
+            letter-spacing: 0.03em;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+        
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            letter-spacing: 0.1em;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            letter-spacing: 0.06em;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+        
+        /* Drop Cap */
+        .drop-cap::first-letter {
+            font-size: 3.5em;
+            float: left;
+            line-height: 0.85;
+            margin-right: 0.4rem;
+            margin-top: 0.15rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--padding);
+        }
+        
+        /* Header & Navigation */
+        header {
+            padding: var(--padding) 0;
+            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+            position: relative;
+        }
+        
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--padding);
+        }
+        
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+        
+        nav a {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--secondary);
+            border-bottom: none;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+        
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: var(--accent);
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: var(--section-gap) 0;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a1a 40%, #0d0d0d 100%);
+            border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+            margin-bottom: var(--section-gap);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(197, 168, 128, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            border-top: 1px solid rgba(197, 168, 128, 0.3);
+            border-bottom: 1px solid rgba(197, 168, 128, 0.3);
+            padding: 1rem 0;
+            display: inline-block;
+        }
+        
+        .hero-cta {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 16px 48px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .hero-cta:hover {
+            background: var(--accent);
+            color: var(--primary);
+            border-color: var(--accent);
+        }
+        
+        /* Section */
+        section {
+            margin-bottom: var(--section-gap);
+        }
+        
+        .section-label {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: rgba(197, 168, 128, 0.6);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Cinematic gradient dividers */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            margin: var(--section-gap) 0;
+            opacity: 0.3;
+        }
+        
+        /* Review Cards */
+        .review-grid {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+        }
+        
+        .review-card {
+            border-left: 2px solid var(--accent);
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .review-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent);
+            position: absolute;
+            left: -8px;
+            top: -20px;
+            line-height: 1;
+            opacity: 0.4;
+            font-family: var(--font-serif);
+        }
+        
+        .review-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .review-name {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .review-date {
+            color: rgba(250, 250, 245, 0.5);
+        }
+        
+        .review-stars {
+            color: var(--accent);
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+        }
+        
+        .review-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        /* Fine borders */
+        .fine-border {
+            border: 1px solid rgba(197, 168, 128, 0.15);
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(197, 168, 128, 0.15);
+            padding: var(--padding) 0;
+            margin-top: var(--section-gap);
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(250, 250, 245, 0.4);
+        }
+        
+        footer .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        footer a {
+            color: rgba(250, 250, 245, 0.6);
+        }
+        
+        /* Tel link styling */
+        .tel-link {
+            font-family: var(--font-sans);
+            font-size: 1.2rem;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 2px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --padding: 32px;
+                --gap: 32px;
+                --section-gap: 80px;
+            }
+            
+            .header-inner {
+                padding: 0 var(--padding);
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 24px var(--padding);
+                border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+                z-index: 100;
+                gap: 20px;
+            }
+            
+            nav ul.open {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .fine-border {
+                padding: 20px;
+            }
+            
+            .review-meta {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            footer .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            :root {
+                --padding: 20px;
+            }
+            
+            .hero-cta {
+                padding: 14px 32px;
+                font-size: 0.8rem;
+            }
+            
+            .review-card {
+                padding-left: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">EDITORIAL.T3</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="kicker">BOUTIQUE T3 / ACCENT HAIRLINES</div>
-      <h1>주식투자 리서치 및 기술 인프라 저널</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>주식투자</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>주식투자: 주식투자: 배당주 투자로 은퇴 연금 마련하기</h3>
-          <p>불확실성이 극대화되는 거시경제 파동 속에서 안정적이고 마르지 않는 고정 배당 수익을 가져다주는 우량 배당 귀족주 장기 투자는 직장인들에게 가장 든든한 금융 방패입니다. 배당 복리 ...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>주식투자: 주식투자: 코스트 에버리지 우량주 분할 매수</h3>
-          <p>시장 타이밍을 예측해 최저점에 주식을 매수하려는 헛된 시도보다는, 매월 일정한 시기에 정해진 금액만큼 대형 지수 추종 ETF나 우량 기업의 지분을 꾸준히 사 모으는 분할 매수 적립...</p>
-        </a>
-      
+<header>
+    <div class="header-inner">
+        <div class="logo">노이어<span>골드</span></div>
+        <nav>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#about">전략</a></li>
+                <li><a href="#reviews">증명</a></li>
+                <li><a href="#contact">연결</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>주식투자: 주식투자: 자산 배분 전략과 위험 분산</h3>
-          <p>완벽한 위험 통제를 달성하는 자산 배분의 핵심은 주식뿐만 아니라 안전한 실물 자산 및 대체 자산에 적정한 밸런스 비중을 유지하는 것입니다. 이는 일시적 하락 파동에서도 내 멘탈과 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>주식투자 전문가들이 엄선한 구글 상위노출 대행 상세 비법 가이드</h3>
-          <p>성공적인 주식투자를 위해 우량 기업의 재무제표와 분기 배당 성향을 꼼꼼하게 연구하다 보면, 리스크의 철저한 분산을 보장하는 것은 오직 변동 없는 오프라인 실물 경제의 든든한 고정 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>주식투자 전문가들이 엄선한 구글 상위노출 대행 상세 비법 가이드</h3>
-          <p>성공적인 주식투자를 위해 우량 기업의 재무제표와 분기 배당 성향을 꼼꼼하게 연구하다 보면, 리스크의 철저한 분산을 보장하는 것은 오직 변동 없는 오프라인 실물 경제의 든든한 고정 ...</p>
-        </a>
-      
+<main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <p class="section-label">마포 · 주식투자 · 구글 상위노출 대행</p>
+            <h1>검색의 <br>지배자</h1>
+            <div class="subtitle">당신의 주식 브랜드, 1페이지에 고정시킨다</div>
+            <p class="drop-cap" style="max-width: 600px;">
+                주식투자 업계는 말이 많다. 수많은 블로그, 유튜브, 사이트가 넘쳐난다. 
+                하지만 구글은 거짓말을 하지 않는다. 진짜 가치를 가진 자만이 1페이지에 앉을 수 있다. 
+                우리는 당신을 그 자리에 앉힌다. 마포에서 시작해 전국으로. 
+                구글 상위노출 대행, 더 이상 고민할 시간이 아니다.
+            </p>
+            <a href="tel:010-6279-0862" class="hero-cta">지금 전화하라</a>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.T3. ALL RIGHTS RESERVED.</div>
+    </section>
+
+    <!-- About / Strategy -->
+    <section id="about">
+        <div class="container">
+            <p class="section-label">우리의 방식</p>
+            <h2>틀을 깨는 전략</h2>
+            <div class="fine-border">
+                <p>
+                    다른 대행사들은 템플릿을 판다. 키워드 채우고, 링크 몇 개 달고, 
+                    '3개월 후에 연락드리겠습니다'라는 거짓말. 우리는 그렇게 하지 않는다.
+                </p>
+                <p>
+                    <strong style="color: var(--accent);">주식투자</strong>는 예술이자 과학이다. 
+                    당신의 콘텐츠가 진짜 투자자에게 닿아야 한다. 
+                    구글 상위노출 대행은 단순한 기술이 아니다. 
+                    시장의 심리를 읽고, 검색 알고리즘의 핵심을 꿰뚫는 작업이다. 
+                    마포에서 시작된 이 전략은 당신의 브랜드를 완전히 다른 차원으로 끌어올린다.
+                </p>
+                <p>
+                    우리는 <em>롱테일 키워드</em>를 무기로 삼는다. 
+                    '주식투자 방법' 같은 거대 키워드는 포화됐다. 
+                    '마포 주식투자 커뮤니티', '주식 초보자를 위한 구글 상위노출' 같은 정밀 타격이 진짜 결과를 만든다.
+                </p>
+            </div>
+            <div class="fine-border">
+                <p style="font-size: 0.95rem; color: rgba(250, 250, 245, 0.7);">
+                    <span style="color: var(--accent);">▼</span> 당신이 얻는 것: 
+                    지속 가능한 트래픽, 진정한 권위, 그리고 경쟁자가 따라올 수 없는 격차.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <!-- Reviews -->
+    <section id="reviews">
+        <div class="container">
+            <p class="section-label">입증된 결과</p>
+            <h2>진짜 사람들의 <br>진짜 이야기</h2>
+            <p style="color: rgba(250, 250, 245, 0.6); margin-bottom: 2rem;">
+                우리는 말만 하지 않는다. 아래는 구글 상위노출 대행을 통해 실제로 변화를 경험한 사람들의 목소리다. 
+                가짜 후기는 없다. 우리에겐 그럴 시간이 없다.
+            </p>
+            
+            <div class="review-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-meta">
+                        <span class="review-name">주식하는김대리</span>
+                        <span class="review-date">2025.03.15</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">
+                        1년 동안 다른 대행사 3군데 써봤는데, 이곳이 유일하게 결과를 냈습니다. 
+                        '주식투자 블로그' 키워드로 3페이지에 머물던 제 사이트, 
+                        6주 만에 1페이지 2위로 올라갔어요. 그들은 구글의 언어를 읽습니다.
+                    </p>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-meta">
+                        <span class="review-name">개미탈출중</span>
+                        <span class="review-date">2025.02.28</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">
+                        구글 상위노출 대행? 여기 말고는 답이 없습니다. 
+                        주식 키워드 1페이지 찍었어요. 그들은 단순히 SEO를 하는 게 아니라 
+                        브랜드의 서사를 검색 결과에 각인시킵니다. 마포에서 이 정도 퀄리티는 처음.
+                    </p>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-meta">
+                        <span class="review-name">투자하는디자이너</span>
+                        <span class="review-date">2025.01.20</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">
+                        처음에는 의심했습니다. '또 다른 대행사겠지' 하고. 
+                        하지만 그들의 접근법은 달랐어요. 기술적 SEO부터 콘텐츠 전략까지, 
+                        모든 게 정교했습니다. 3개월 만에 방문자 수 340% 증가. 
+                        주식 관련 키워드에서 독보적인 위치를 차지했습니다.
+                    </p>
+                </div>
+                
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-meta">
+                        <span class="review-name">서울개미연합</span>
+                        <span class="review-date">2024.12.05</span>
+                        <span class="review-stars">★★★★☆</span>
+                    </div>
+                    <p class="review-text">
+                        처음에는 가격이 부담됐습니다. 하지만 투자 대비 수익을 계산해보면 
+                        이보다 효율적인 마케팅은 없습니다. 구글 상위노출 덕분에 
+                        제 블로그가 '주식투자 가이드' 검색어에서 1페이지를 유지한 지 
+                        4개월째입니다. 마포에서 이 서비스를 만난 건 행운이에요.
+                    </p>
+                </div>
+                
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-meta">
+                        <span class="review-name">주식하는변호사</span>
+                        <span class="review-date">2024.11.18</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">
+                        법률 지식과 주식투자를 결합한 콘텐츠를 만들고 있었지만, 
+                        아무도 찾지 않았습니다. 그들이 제 사이트를 분석하고 
+                        롱테일 키워드 전략을 제안했어요. '주식투자 법률 상식'으로 
+                        지금은 월 2만 명이 방문합니다. 그들의 전략은 정말 날카롭습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <!-- Contact / CTA -->
+    <section id="contact">
+        <div class="container">
+            <p class="section-label">지금 행동하라</p>
+            <h2>1페이지는 <br>기다리지 않는다</h2>
+            <div class="fine-border" style="text-align: center; padding: 48px;">
+                <p style="font-size: 1.3rem; margin-bottom: 1rem;">
+                    당신의 주식 브랜드가 구글 1페이지에 <br>
+                    <strong style="color: var(--accent);">고정</strong>되어야 하는 이유
+                </p>
+                <p style="color: rgba(250, 250, 245, 0.6); max-width: 480px; margin: 0 auto 2rem;">
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">주식투자 해결 방법 총정리 — 전문가가 알려주는 5가지 팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### MK울트라 프로젝트 의회 청문회 서브프로젝트 코드명 및 목적에 대한 구체적 맥락 아, 진짜... MK울트라는 CIA 비밀 프로젝트였다. 하지만 이는 음모론과 사실의 차이를 통해 보여줍니다. #### 1. **전직 정보기관 분석관의 시점에서의 서브프로젝트 의문**</p>
       </div>
-    </footer>
+      <a href="posts/guide-001-1a4dhzc.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
 </body>
 </html>
